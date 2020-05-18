@@ -118,6 +118,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1611785252}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &33189489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33189488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ff30cb259a21045b8243a338191e5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectibles: {fileID: 8559879754304396921, guid: e5c1ffdb74925eb40b66e7ab3de9564a,
+    type: 3}
+  score: 0
 --- !u!1001 &76500157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -270,7 +285,7 @@ GameObject:
   - component: {fileID: 245616730}
   m_Layer: 0
   m_Name: Finish
-  m_TagString: Untagged
+  m_TagString: FinishLine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
