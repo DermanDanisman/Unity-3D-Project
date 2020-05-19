@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
+            other.gameObject.transform.position = GameObject.Find("Start").transform.position + Vector3.up;
         }
     }
 }

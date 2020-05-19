@@ -18,7 +18,11 @@ public class PlayerController : MonoBehaviour
         {
             if (score == 4)
             {
-                print("You have completed the level!");
+                print("You have completed the level! Your score is: " + score);
+            }
+            else
+            {
+                print("You have to collect all the items!");
             }
         }
     }
