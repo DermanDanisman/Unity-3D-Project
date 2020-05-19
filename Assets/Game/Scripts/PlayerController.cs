@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
             if (score == 4)
             {
                 print("You have completed the level! Your score is: " + score);
+                GameObject.Find("FinishingText").GetComponent<Text>().text = "Well Done! You have completed this level!";
             }
             else
             {
