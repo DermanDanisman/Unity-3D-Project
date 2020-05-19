@@ -5,14 +5,33 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    public int score = 0;
+    public int score;
+    float timer;
 
+    private void Start() 
+    {
+        score = 0;
+        timer = 0;
+    }
+
+    private void Update() 
+    {
+        timer += Time.deltaTime;
+    }
     private void OnCollisionEnter(Collision other) 
     {
         if (other.gameObject.tag == "Collectible")
         {
             Destroy(other.gameObject);
-            score++;
+            GameObject.Find("CollectiblesText").GetComponent<Text>().text = "You have collected an item!";
+            timer = 0;
+
+            if (timer >= 0)
+            {
+                GameObject.Find("CollectiblesText").GetComponent<Text>().text = "";
+            }
+            GameObject.Find("ScoreText").GetComponent<Text>().text = score++.ToString();
+
         }
 
         if (other.gameObject.tag == "FinishLine")
