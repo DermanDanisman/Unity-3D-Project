@@ -28,5 +28,7 @@ public class HealthManager : MonoBehaviour
     void SetHealth(int newHealth)
     {
         health = newHealth;
+        if (health <= 0)
+            Destroy(gameObject);
     }
 }
