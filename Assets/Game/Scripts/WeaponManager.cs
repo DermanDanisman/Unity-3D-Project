@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponManager : MonoBehaviour
 {
     [SerializeField] GameObject shootingEffect;
+    int ammo = 3;
     // Update is called once per frame
     void Update()
     {
@@ -17,14 +18,24 @@ public class WeaponManager : MonoBehaviour
         rayFromPlayer = GetComponent<Camera>().ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
         Debug.DrawRay(rayFromPlayer.origin, rayFromPlayer.direction * 10, Color.red);
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (ammo > 0)
         {
-            RaycastHit hit;
-            if (Physics.Raycast(rayFromPlayer, out hit, 100))
+            if (Input.GetKeyDown(KeyCode.F))
             {
-                print("You are looking at the " + hit.transform.gameObject.name);
-                Instantiate(shootingEffect, hit.point, Quaternion.identity);
-            }
+                RaycastHit hit;
+                if (Physics.Raycast(rayFromPlayer, out hit, 100))
+                {
+                    print("You are looking at the " + hit.transform.gameObject.name);
+                    Instantiate(shootingEffect, hit.point, Quaternion.identity);
+                }
+                ammo--;
+                print(ammo + " bullet left!");
+        }
+        else
+        {
+            print("You need to reload!");
+        }
+            
         }
     }
 }
