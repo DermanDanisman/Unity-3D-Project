@@ -30,6 +30,10 @@ public class WeaponManager : MonoBehaviour
                 }
                 ammo--;
                 print(ammo + " bullet left!");
+                if (hit.transform.name == "Target")
+                {
+                    hit.transform.GetComponent<HealthManager>().GotHit(10);
+                }
         }
         else
         {
