@@ -83,7 +83,7 @@ public class WeaponManager : MonoBehaviour
                 print(weaponIndex);
                 currentWeapon = weapons[weaponIndex];
             }
-            print("Current weapon: " + currentWeapon + " | " + weaponIndex);
+            print("Current weapon: " + currentWeapon + " Ammo: " + currentAmmo[weaponIndex]);
         }
     }
 
