@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponManager : MonoBehaviour
 {
     [SerializeField] GameObject shootingEffect;
+    [SerializeField] AudioClip gunShotSound;
     
     int ammo;
     float reloadTime;
@@ -24,6 +25,7 @@ public class WeaponManager : MonoBehaviour
         currentWeapon = weapons[weaponIndex];
         print("Current weapon: " + currentWeapon);
     }
+    
     void Update()
     {
         WeaponSwitch();
@@ -34,30 +36,30 @@ public class WeaponManager : MonoBehaviour
     {
         Ray rayFromPlayer = GetComponentInChildren<Camera>().ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
 
-        if (ammo > 0)
+        if (Input.GetKeyDown(KeyCode.F) && currentAmmo[weaponIndex] > 0)
         {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                ammo--;
-                print(ammo + " bullet left!");
+            currentAmmo[weaponIndex]--;
+            print(currentAmmo[weaponIndex] + " bullet left!");
+            
+            GetComponentInChildren<AudioSource>().clip = gunShotSound;
+            GetComponentInChildren<AudioSource>().Play();
 
-                RaycastHit hit;
-                if (Physics.Raycast(rayFromPlayer, out hit, 100))
-                {
-                    print("You are looking at the " + hit.transform.gameObject.name);
-                    GameObject effect = Instantiate(shootingEffect, hit.point, Quaternion.identity);
-                    Destroy(effect, 5);
-                }
-                if (hit.transform.tag == "Target")
-                {
-                    hit.transform.GetComponent<HealthManager>().GotHit(10);
-                }
-                else return;
-            }
-            if (ammo <= 0)
+            RaycastHit hit;
+            if (Physics.Raycast(rayFromPlayer, out hit, 100))
             {
-                print("You need to reload!");
+                print("You are looking at the " + hit.transform.gameObject.name);
+                GameObject effect = Instantiate(shootingEffect, hit.point, Quaternion.identity);
+                Destroy(effect, 5);
             }
+            if (hit.transform.tag == "Target")
+            {
+                hit.transform.GetComponent<HealthManager>().GotHit(10);
+            }
+            else return;
+        }
+        if (currentAmmo[weaponIndex] <= 0)
+        {
+            print("You need to reload!");
         }
     }
 
@@ -91,11 +93,11 @@ public class WeaponManager : MonoBehaviour
     {
         if (other.gameObject.tag == "AmmoBox")
         {
-            ammo = 10;
-            if (ammo <= 10)
-                ammo = 10;
+            currentAmmo[weaponIndex] += 10;
+            if (currentAmmo[weaponIndex] >= clipSize[weaponIndex])
+                currentAmmo[weaponIndex] = clipSize[weaponIndex];
             Destroy(other.gameObject);
-            print("Ammo: " + ammo);
+            print("Ammo: " + currentAmmo[weaponIndex]);
         }
     }
 
