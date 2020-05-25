@@ -8,19 +8,23 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] AudioClip gunShotSound;
     
     int ammo;
-    float reloadTime;
     bool startTimer;
-    bool canShoot = true;
+    bool canShoot;
     string currentWeapon;
     int weaponIndex;
+    float timer;
 
     [SerializeField] string[] weapons;
     [SerializeField] int[] currentAmmo;
     [SerializeField] int[] clipSize;
+    [SerializeField] int[] ammoPouch;
+    [SerializeField] int[] maxAmmoPouch;
+    [SerializeField] float[] reloadTime;
     //[SerializeField] bool[] hasWeapon;
 
     private void Start() 
     {
+        canShoot = true;
         weaponIndex = 0;
         currentWeapon = weapons[weaponIndex];
         print("Current weapon: " + currentWeapon);
@@ -36,8 +40,9 @@ public class WeaponManager : MonoBehaviour
     {
         Ray rayFromPlayer = GetComponentInChildren<Camera>().ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
 
-        if (Input.GetKeyDown(KeyCode.F) && currentAmmo[weaponIndex] > 0)
+        if (Input.GetKeyDown(KeyCode.F) && currentAmmo[weaponIndex] > 0 && canShoot)
         {
+            startTimer = true;
             currentAmmo[weaponIndex]--;
             print(currentAmmo[weaponIndex] + " bullet left!");
             
@@ -57,10 +62,13 @@ public class WeaponManager : MonoBehaviour
             }
             else return;
         }
-        if (currentAmmo[weaponIndex] <= 0)
+        if (currentAmmo[weaponIndex] <= 0 && ammoPouch[weaponIndex] > 0)
         {
-            print("You need to reload!");
+            canShoot = false;
+            StartCoroutine(Reload());
         }
+
+
     }
 
     void WeaponSwitch()
@@ -89,15 +97,29 @@ public class WeaponManager : MonoBehaviour
         }
     }
 
+    IEnumerator Reload()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            print("Reloading.....");
+            yield return new WaitForSeconds(reloadTime[weaponIndex]);
+            currentAmmo[weaponIndex] = clipSize[weaponIndex];
+            ammoPouch[weaponIndex] -= currentAmmo[weaponIndex];
+            print("Total ammo left: " + ammoPouch[weaponIndex]);
+            canShoot = true;
+
+        }
+    }
+
     private void OnControllerColliderHit(ControllerColliderHit other)
     {
         if (other.gameObject.tag == "AmmoBox")
         {
-            currentAmmo[weaponIndex] += 10;
-            if (currentAmmo[weaponIndex] >= clipSize[weaponIndex])
-                currentAmmo[weaponIndex] = clipSize[weaponIndex];
+            ammoPouch[weaponIndex] += 10;
+            if (ammoPouch[weaponIndex] >= maxAmmoPouch[weaponIndex])
+                ammoPouch[weaponIndex] = maxAmmoPouch[weaponIndex];
             Destroy(other.gameObject);
-            print("Ammo: " + currentAmmo[weaponIndex]);
+            print("Total Ammo: " + ammoPouch[weaponIndex]);
         }
     }
 
