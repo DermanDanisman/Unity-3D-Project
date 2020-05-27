@@ -120,7 +120,16 @@ public class WeaponManager : MonoBehaviour
     {
         if (other.gameObject.tag == "AmmoBox")
         {
-            ammoPouch[weaponIndex] += 10;
+            /*ammoPouch[0] += 10;
+            ammoPouch[1] += 30;
+            ammoPouch[2] += 5;*/
+            if (currentWeapon == weapons[0])
+                ammoPouch[weaponIndex] += 10;
+            else if (currentWeapon == weapons[1])
+                ammoPouch[weaponIndex] += 30;
+            else if (currentWeapon == weapons[2])
+                ammoPouch[weaponIndex] += 5;
+
             if (ammoPouch[weaponIndex] >= maxAmmoPouch[weaponIndex])
                 ammoPouch[weaponIndex] = maxAmmoPouch[weaponIndex];
             Destroy(other.gameObject);
