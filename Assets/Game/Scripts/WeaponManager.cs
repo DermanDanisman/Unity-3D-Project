@@ -111,6 +111,11 @@ public class WeaponManager : MonoBehaviour
         }
     }
 
+    public string GetWeaponInfo()
+    {
+        return currentWeapon + "  " + currentAmmo[weaponIndex] + " / " + ammoPouch[weaponIndex];
+    }
+
     private void OnControllerColliderHit(ControllerColliderHit other)
     {
         if (other.gameObject.tag == "AmmoBox")
