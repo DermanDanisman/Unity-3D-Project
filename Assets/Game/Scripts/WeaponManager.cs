@@ -6,6 +6,7 @@ public class WeaponManager : MonoBehaviour
 {
     [SerializeField] GameObject shootingEffect;
     [SerializeField] AudioClip gunShotSound;
+    [SerializeField] GameObject grenade;
     
     int ammo;
     bool startTimer;
@@ -49,6 +50,13 @@ public class WeaponManager : MonoBehaviour
             GetComponentInChildren<AudioSource>().clip = gunShotSound;
             GetComponentInChildren<AudioSource>().Play();
 
+            if (currentWeapon == weapons[2])
+            {
+                Vector3 pos = GetComponentInChildren<Camera>().transform.position;
+                Instantiate(grenade, pos, Quaternion.identity);
+                GetComponent<Rigidbody>().AddForce(transform.forward * 100);
+            }
+            
             RaycastHit hit;
             if (Physics.Raycast(rayFromPlayer, out hit, 100))
             {
@@ -120,18 +128,18 @@ public class WeaponManager : MonoBehaviour
     {
         if (other.gameObject.tag == "AmmoBox")
         {
-            /*ammoPouch[0] += 10;
-            ammoPouch[1] += 30;
-            ammoPouch[2] += 5;*/
-            if (currentWeapon == weapons[0])
-                ammoPouch[weaponIndex] += 10;
-            else if (currentWeapon == weapons[1])
-                ammoPouch[weaponIndex] += 30;
-            else if (currentWeapon == weapons[2])
-                ammoPouch[weaponIndex] += 5;
+            ammoPouch[0] += 10;
+            if (ammoPouch[0] >= maxAmmoPouch[0])
+                ammoPouch[0] = maxAmmoPouch[0];
 
-            if (ammoPouch[weaponIndex] >= maxAmmoPouch[weaponIndex])
-                ammoPouch[weaponIndex] = maxAmmoPouch[weaponIndex];
+            ammoPouch[1] += 30;
+            if (ammoPouch[1] >= maxAmmoPouch[1])
+                ammoPouch[1] = maxAmmoPouch[1];
+
+            ammoPouch[2] += 5;
+            if (ammoPouch[2] >= maxAmmoPouch[2])
+                ammoPouch[2] = maxAmmoPouch[2];
+
             Destroy(other.gameObject);
             print("Total Ammo: " + ammoPouch[weaponIndex]);
         }
