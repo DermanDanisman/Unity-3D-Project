@@ -11,6 +11,7 @@ public class WeaponManager : MonoBehaviour
     int ammo;
     bool startTimer;
     bool canShoot;
+    bool canReload;
     string currentWeapon;
     int weaponIndex;
     float timer;
@@ -35,6 +36,7 @@ public class WeaponManager : MonoBehaviour
     {
         WeaponSwitch();
         Shoot();
+        ThrowGrenade();
     }
 
     void Shoot()
@@ -50,15 +52,8 @@ public class WeaponManager : MonoBehaviour
             GetComponentInChildren<AudioSource>().clip = gunShotSound;
             GetComponentInChildren<AudioSource>().Play();
 
-            if (currentWeapon == weapons[2])
-            {
-                Vector3 pos = GetComponentInChildren<Camera>().transform.position;
-                Instantiate(grenade, pos, Quaternion.identity);
-                GetComponent<Rigidbody>().AddForce(transform.forward * 100);
-            }
-            
             RaycastHit hit;
-            if (Physics.Raycast(rayFromPlayer, out hit, 100))
+            if (Physics.Raycast(rayFromPlayer, out hit, 100) && currentWeapon != weapons[2])
             {
                 print("You are looking at the " + hit.transform.gameObject.name);
                 GameObject effect = Instantiate(shootingEffect, hit.point, Quaternion.identity);
@@ -73,10 +68,23 @@ public class WeaponManager : MonoBehaviour
         if (currentAmmo[weaponIndex] <= 0 && ammoPouch[weaponIndex] > 0)
         {
             canShoot = false;
+            canReload = true;
             StartCoroutine(Reload());
         }
+    }
 
-
+    void ThrowGrenade()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            if (currentWeapon == weapons[2])
+            {
+                GameObject launcher = GameObject.Find("Launcher");
+                GameObject g = Instantiate(grenade, launcher.transform.position, Quaternion.identity);
+                g.GetComponent<Rigidbody>().AddForce(launcher.transform.forward * 500);
+                Destroy(g, 5);
+            }
+        }
     }
 
     void WeaponSwitch()
@@ -115,6 +123,7 @@ public class WeaponManager : MonoBehaviour
             ammoPouch[weaponIndex] -= currentAmmo[weaponIndex];
             print("Total ammo left: " + ammoPouch[weaponIndex]);
             canShoot = true;
+            canReload = false;
 
         }
     }

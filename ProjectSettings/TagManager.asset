@@ -8,6 +8,7 @@ TagManager:
   - Collectible
   - AmmoBox
   - Target
+  - Launcher
   layers:
   - Default
   - TransparentFX
