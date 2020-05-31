@@ -21,12 +21,12 @@ public class GrenadeScript : MonoBehaviour {
 	[Tooltip("The intensity of the explosion force")]
 	public float power = 350.0F;
 
-	[Header("Throw Force")]
+	/*[Header("Throw Force")]
 	[Tooltip("Minimum throw force")]
 	public float minimumForce = 1500.0f;
 	[Tooltip("Maximum throw force")]
 	public float maximumForce = 2500.0f;
-	private float throwForce;
+	private float throwForce;*/
 
 	[Header("Audio")]
 	public AudioSource impactSound;
@@ -35,8 +35,8 @@ public class GrenadeScript : MonoBehaviour {
 	{
 		//Generate random throw force
 		//based on min and max values
-		throwForce = Random.Range
-			(minimumForce, maximumForce);
+		/*throwForce = Random.Range
+			(minimumForce, maximumForce);*/
 
 		//Random rotation of the grenade
 		GetComponent<Rigidbody>().AddRelativeTorque 
@@ -49,7 +49,7 @@ public class GrenadeScript : MonoBehaviour {
 	private void Start () 
 	{
 		//Launch the projectile forward by adding force to it at start
-		GetComponent<Rigidbody>().AddForce(gameObject.transform.forward * throwForce);
+		//GetComponent<Rigidbody>().AddForce(gameObject.transform.forward * throwForce);
 
 		//Start the explosion timer
 		StartCoroutine (ExplosionTimer ());
@@ -88,12 +88,13 @@ public class GrenadeScript : MonoBehaviour {
 			
 			//If the explosion hits "Target" tag and isHit is false
 			if (hit.GetComponent<Collider>().tag == "Target" 
-			    	&& hit.gameObject.GetComponent<TargetScript>().isHit == false) 
+			    	/*&& hit.gameObject.GetComponent<TargetScript>().isHit == false*/) 
 			{
+				hit.gameObject.GetComponent<HealthManager>().GotHit(50);
 				//Animate the target 
-				hit.gameObject.GetComponent<Animation> ().Play("target_down");
+				//hit.gameObject.GetComponent<Animation> ().Play("target_down");
 				//Toggle "isHit" on target object
-				hit.gameObject.GetComponent<TargetScript>().isHit = true;
+				//hit.gameObject.GetComponent<TargetScript>().isHit = true;
 			}
 
 			//If the explosion hits "ExplosiveBarrel" tag

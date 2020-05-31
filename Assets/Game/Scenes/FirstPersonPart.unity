@@ -1242,7 +1242,8 @@ MonoBehaviour:
   shootingEffect: {fileID: 1133313454119596, guid: 79927c6543a058b4383885fac101fe2e,
     type: 3}
   gunShotSound: {fileID: 8300000, guid: 80a8f35c8ff86464ca0ff579956a8ad4, type: 3}
-  grenade: {fileID: 3209968172921952563, guid: e4356ad4b1a93ba48b7cbb144390e7d7, type: 3}
+  grenade: {fileID: 1948591290861370, guid: 7b04fe350ed10a741a1e245447860d9e, type: 3}
+  ammoBoxSound: {fileID: 8300000, guid: 772b515cf339c5843a481e3a030c9f5d, type: 3}
   weapons:
   - Gun
   - Automatic Gun

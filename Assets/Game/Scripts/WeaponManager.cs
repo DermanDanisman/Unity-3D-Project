@@ -7,14 +7,20 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] GameObject shootingEffect;
     [SerializeField] AudioClip gunShotSound;
     [SerializeField] GameObject grenade;
+    [SerializeField] AudioClip ammoBoxSound;
     
     int ammo;
     bool startTimer;
     bool canShoot;
     bool canReload;
+    bool playSound;
     string currentWeapon;
     int weaponIndex;
     float timer;
+    float minimumForce = 500.0f;
+    float maximumForce = 1500.0f;
+    float throwForce;
+    GameObject ammoBox;
 
     [SerializeField] string[] weapons;
     [SerializeField] int[] currentAmmo;
@@ -26,6 +32,7 @@ public class WeaponManager : MonoBehaviour
 
     private void Start() 
     {
+        playSound = false;
         canShoot = true;
         weaponIndex = 0;
         currentWeapon = weapons[weaponIndex];
@@ -37,6 +44,9 @@ public class WeaponManager : MonoBehaviour
         WeaponSwitch();
         Shoot();
         ThrowGrenade();
+        if(playSound == true)
+            PlaySound();
+        else return;
     }
 
     void Shoot()
@@ -63,7 +73,10 @@ public class WeaponManager : MonoBehaviour
             {
                 hit.transform.GetComponent<HealthManager>().GotHit(10);
             }
-            else return;
+            else if (hit.transform.tag != "Target")
+            {
+                print("Did not hit target");
+            }
         }
         if (currentAmmo[weaponIndex] <= 0 && ammoPouch[weaponIndex] > 0)
         {
@@ -75,15 +88,14 @@ public class WeaponManager : MonoBehaviour
 
     void ThrowGrenade()
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        throwForce = Random.Range(minimumForce, maximumForce);
+
+        if (Input.GetKeyDown(KeyCode.G) && currentAmmo[2] > 0)
         {
-            if (currentWeapon == weapons[2])
-            {
-                GameObject launcher = GameObject.Find("Launcher");
-                GameObject g = Instantiate(grenade, launcher.transform.position, Quaternion.identity);
-                g.GetComponent<Rigidbody>().AddForce(launcher.transform.forward * 500);
-                Destroy(g, 5);
-            }
+            GameObject launcher = GameObject.Find("Launcher");
+            GameObject g = Instantiate(grenade, launcher.transform.position, Quaternion.identity);
+            g.GetComponent<Rigidbody>().AddForce(launcher.transform.forward * throwForce);
+            Destroy(g, 5);
         }
     }
 
@@ -149,9 +161,19 @@ public class WeaponManager : MonoBehaviour
             if (ammoPouch[2] >= maxAmmoPouch[2])
                 ammoPouch[2] = maxAmmoPouch[2];
 
+            playSound = true;
+
             Destroy(other.gameObject);
             print("Total Ammo: " + ammoPouch[weaponIndex]);
         }
+    }
+
+    private void PlaySound()
+    {
+        ammoBox = GameObject.FindGameObjectWithTag("AmmoBox");
+        ammoBox.GetComponent<AudioSource>().clip = ammoBoxSound;
+        ammoBox.GetComponent<AudioSource>().Play();
+        playSound = false;
     }
 
 }
