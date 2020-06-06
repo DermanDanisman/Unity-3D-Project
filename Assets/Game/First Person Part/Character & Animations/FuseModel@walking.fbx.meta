@@ -1,0 +1,412 @@
+fileFormatVersion: 2
+guid: 528b3a5ef57247042ab127136ddd4ed2
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Beards
+    100002: Body
+    100004: Bottoms
+    100006: Eyelashes
+    100008: Eyes
+    100010: //RootNode
+    100012: Hats
+    100014: Masks
+    100016: mixamorig:Head
+    100018: mixamorig:HeadTop_End
+    100020: mixamorig:Hips
+    100022: mixamorig:LeftArm
+    100024: mixamorig:LeftEye
+    100026: mixamorig:LeftFoot
+    100028: mixamorig:LeftForeArm
+    100030: mixamorig:LeftHand
+    100032: mixamorig:LeftHandIndex1
+    100034: mixamorig:LeftHandIndex2
+    100036: mixamorig:LeftHandIndex3
+    100038: mixamorig:LeftHandIndex4
+    100040: mixamorig:LeftHandMiddle1
+    100042: mixamorig:LeftHandMiddle2
+    100044: mixamorig:LeftHandMiddle3
+    100046: mixamorig:LeftHandMiddle4
+    100048: mixamorig:LeftHandPinky1
+    100050: mixamorig:LeftHandPinky2
+    100052: mixamorig:LeftHandPinky3
+    100054: mixamorig:LeftHandPinky4
+    100056: mixamorig:LeftHandRing1
+    100058: mixamorig:LeftHandRing2
+    100060: mixamorig:LeftHandRing3
+    100062: mixamorig:LeftHandRing4
+    100064: mixamorig:LeftHandThumb1
+    100066: mixamorig:LeftHandThumb2
+    100068: mixamorig:LeftHandThumb3
+    100070: mixamorig:LeftHandThumb4
+    100072: mixamorig:LeftLeg
+    100074: mixamorig:LeftShoulder
+    100076: mixamorig:LeftToe_End
+    100078: mixamorig:LeftToeBase
+    100080: mixamorig:LeftUpLeg
+    100082: mixamorig:Neck
+    100084: mixamorig:RightArm
+    100086: mixamorig:RightEye
+    100088: mixamorig:RightFoot
+    100090: mixamorig:RightForeArm
+    100092: mixamorig:RightHand
+    100094: mixamorig:RightHandIndex1
+    100096: mixamorig:RightHandIndex2
+    100098: mixamorig:RightHandIndex3
+    100100: mixamorig:RightHandIndex4
+    100102: mixamorig:RightHandMiddle1
+    100104: mixamorig:RightHandMiddle2
+    100106: mixamorig:RightHandMiddle3
+    100108: mixamorig:RightHandMiddle4
+    100110: mixamorig:RightHandPinky1
+    100112: mixamorig:RightHandPinky2
+    100114: mixamorig:RightHandPinky3
+    100116: mixamorig:RightHandPinky4
+    100118: mixamorig:RightHandRing1
+    100120: mixamorig:RightHandRing2
+    100122: mixamorig:RightHandRing3
+    100124: mixamorig:RightHandRing4
+    100126: mixamorig:RightHandThumb1
+    100128: mixamorig:RightHandThumb2
+    100130: mixamorig:RightHandThumb3
+    100132: mixamorig:RightHandThumb4
+    100134: mixamorig:RightLeg
+    100136: mixamorig:RightShoulder
+    100138: mixamorig:RightToe_End
+    100140: mixamorig:RightToeBase
+    100142: mixamorig:RightUpLeg
+    100144: mixamorig:Spine
+    100146: mixamorig:Spine1
+    100148: mixamorig:Spine2
+    100150: Shoes
+    100152: Tops
+    400000: Beards
+    400002: Body
+    400004: Bottoms
+    400006: Eyelashes
+    400008: Eyes
+    400010: //RootNode
+    400012: Hats
+    400014: Masks
+    400016: mixamorig:Head
+    400018: mixamorig:HeadTop_End
+    400020: mixamorig:Hips
+    400022: mixamorig:LeftArm
+    400024: mixamorig:LeftEye
+    400026: mixamorig:LeftFoot
+    400028: mixamorig:LeftForeArm
+    400030: mixamorig:LeftHand
+    400032: mixamorig:LeftHandIndex1
+    400034: mixamorig:LeftHandIndex2
+    400036: mixamorig:LeftHandIndex3
+    400038: mixamorig:LeftHandIndex4
+    400040: mixamorig:LeftHandMiddle1
+    400042: mixamorig:LeftHandMiddle2
+    400044: mixamorig:LeftHandMiddle3
+    400046: mixamorig:LeftHandMiddle4
+    400048: mixamorig:LeftHandPinky1
+    400050: mixamorig:LeftHandPinky2
+    400052: mixamorig:LeftHandPinky3
+    400054: mixamorig:LeftHandPinky4
+    400056: mixamorig:LeftHandRing1
+    400058: mixamorig:LeftHandRing2
+    400060: mixamorig:LeftHandRing3
+    400062: mixamorig:LeftHandRing4
+    400064: mixamorig:LeftHandThumb1
+    400066: mixamorig:LeftHandThumb2
+    400068: mixamorig:LeftHandThumb3
+    400070: mixamorig:LeftHandThumb4
+    400072: mixamorig:LeftLeg
+    400074: mixamorig:LeftShoulder
+    400076: mixamorig:LeftToe_End
+    400078: mixamorig:LeftToeBase
+    400080: mixamorig:LeftUpLeg
+    400082: mixamorig:Neck
+    400084: mixamorig:RightArm
+    400086: mixamorig:RightEye
+    400088: mixamorig:RightFoot
+    400090: mixamorig:RightForeArm
+    400092: mixamorig:RightHand
+    400094: mixamorig:RightHandIndex1
+    400096: mixamorig:RightHandIndex2
+    400098: mixamorig:RightHandIndex3
+    400100: mixamorig:RightHandIndex4
+    400102: mixamorig:RightHandMiddle1
+    400104: mixamorig:RightHandMiddle2
+    400106: mixamorig:RightHandMiddle3
+    400108: mixamorig:RightHandMiddle4
+    400110: mixamorig:RightHandPinky1
+    400112: mixamorig:RightHandPinky2
+    400114: mixamorig:RightHandPinky3
+    400116: mixamorig:RightHandPinky4
+    400118: mixamorig:RightHandRing1
+    400120: mixamorig:RightHandRing2
+    400122: mixamorig:RightHandRing3
+    400124: mixamorig:RightHandRing4
+    400126: mixamorig:RightHandThumb1
+    400128: mixamorig:RightHandThumb2
+    400130: mixamorig:RightHandThumb3
+    400132: mixamorig:RightHandThumb4
+    400134: mixamorig:RightLeg
+    400136: mixamorig:RightShoulder
+    400138: mixamorig:RightToe_End
+    400140: mixamorig:RightToeBase
+    400142: mixamorig:RightUpLeg
+    400144: mixamorig:Spine
+    400146: mixamorig:Spine1
+    400148: mixamorig:Spine2
+    400150: Shoes
+    400152: Tops
+    2100000: Bodymat
+    2100002: Beardmat
+    2100004: Maskmat
+    2100006: Bottommat
+    2100008: Shoesmat
+    2100010: Topmat
+    2100012: Hatmat
+    4300000: Eyes
+    4300002: Eyelashes
+    4300004: Body
+    4300006: Beards
+    4300008: Masks
+    4300010: Bottoms
+    4300012: Shoes
+    4300014: Tops
+    4300016: Hats
+    7400000: mixamo.com
+    9500000: //RootNode
+    13700000: Beards
+    13700002: Body
+    13700004: Bottoms
+    13700006: Eyelashes
+    13700008: Eyes
+    13700010: Hats
+    13700012: Masks
+    13700014: Shoes
+    13700016: Tops
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Beard_diffuse
+    second: {fileID: 2800000, guid: 224a7903005b280488cae82d01dd0ce3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Beard_gloss
+    second: {fileID: 2800000, guid: 9d4bdec0e5a9249499905f430cd0b5fa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Beard_normal
+    second: {fileID: 2800000, guid: 5ec00a12f9c4b504898731b3998cb65b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Beard_specular
+    second: {fileID: 2800000, guid: b7d780ac91a647446bdc9ff62c60d05c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Body_diffuse
+    second: {fileID: 2800000, guid: 089c376dc5145094989b31cea20f5242, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Body_gloss
+    second: {fileID: 2800000, guid: 7bb8126a932f0484882dc84a25039912, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Body_normal
+    second: {fileID: 2800000, guid: a79af7e546537b140ba2329d45d59185, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Body_specular
+    second: {fileID: 2800000, guid: 5fd28adefe7998c498842a24b839783b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Bottom_diffuse
+    second: {fileID: 2800000, guid: 14f7c57a82ea669478b039b0a47f6c11, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Bottom_gloss
+    second: {fileID: 2800000, guid: e38bf5df867f49242a4d62ea9bbbc15b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Bottom_normal
+    second: {fileID: 2800000, guid: 5306145d88bbac74bbb545fc08d81c61, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Bottom_specular
+    second: {fileID: 2800000, guid: ec0184b7dfabf304593f1125500c7dfc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Hat_diffuse
+    second: {fileID: 2800000, guid: 21d628b3a327f8c499d92583ec30e298, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Hat_gloss
+    second: {fileID: 2800000, guid: f98549f8375554b448f74eb53f6a15df, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Hat_normal
+    second: {fileID: 2800000, guid: fb8e924b8e6f2a242b539fd90b784520, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Hat_specular
+    second: {fileID: 2800000, guid: 2ade782282fb6ee47b99f4ee20188608, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Mask_diffuse
+    second: {fileID: 2800000, guid: 53e1030c494bab241860ff803ec4417b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Mask_gloss
+    second: {fileID: 2800000, guid: c5d99d6f3d9f69d46a54d135e7afdc4c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Mask_normal
+    second: {fileID: 2800000, guid: 9176ee29a19b8874c990e534f3b1cf9b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Mask_specular
+    second: {fileID: 2800000, guid: dc0be033fbd37664caecf607b48ba545, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Shoes_diffuse
+    second: {fileID: 2800000, guid: c4bfd32598eae764381183504ad6675b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Shoes_gloss
+    second: {fileID: 2800000, guid: e087f66b53df9ed4e8ae0903707956fd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Shoes_normal
+    second: {fileID: 2800000, guid: e375a28d7e5f4da45abdf8961db7da9d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Shoes_specular
+    second: {fileID: 2800000, guid: f88bf9a286f0242449f12b2bbcae4132, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Top_diffuse
+    second: {fileID: 2800000, guid: c8f6c2eb5f236e84d99155c3b13dc1eb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Top_gloss
+    second: {fileID: 2800000, guid: ea0c6287071f5f742bcf0f9b9b34704e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Top_normal
+    second: {fileID: 2800000, guid: 209079762987c4340aba385c18213a28, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FuseModel_Top_specular
+    second: {fileID: 2800000, guid: eea806bb876cc014294cf9cbd7f81b61, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
