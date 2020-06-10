@@ -97,7 +97,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.35
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.5
@@ -105,7 +105,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.11666667
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 1
@@ -124,10 +124,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ammo Box (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6928712700579786731, guid: 253fab38975d0df4480b388c956e2a8b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7226747978413055681, guid: 253fab38975d0df4480b388c956e2a8b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.616
+      value: 21.08
       objectReference: {fileID: 0}
     - target: {fileID: 7226747978413055681, guid: 253fab38975d0df4480b388c956e2a8b,
         type: 3}
@@ -267,6 +272,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Target (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3315774762619428514, guid: 1abc7ad379df3764e98b2309740a55cc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3315774762619428518, guid: 1abc7ad379df3764e98b2309740a55cc,
         type: 3}
@@ -420,10 +430,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ammo Box (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6928712700579786731, guid: 253fab38975d0df4480b388c956e2a8b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7226747978413055681, guid: 253fab38975d0df4480b388c956e2a8b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.07
+      value: 24.08
       objectReference: {fileID: 0}
     - target: {fileID: 7226747978413055681, guid: 253fab38975d0df4480b388c956e2a8b,
         type: 3}
@@ -862,10 +877,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ammo Box (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6928712700579786731, guid: 253fab38975d0df4480b388c956e2a8b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7226747978413055681, guid: 253fab38975d0df4480b388c956e2a8b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.53
+      value: 14.96
       objectReference: {fileID: 0}
     - target: {fileID: 7226747978413055681, guid: 253fab38975d0df4480b388c956e2a8b,
         type: 3}
@@ -1097,6 +1117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformPrototype04x01x04
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 831c1389ceffed84d947c9aa3fc86ac2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 831c1389ceffed84d947c9aa3fc86ac2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.78
@@ -1263,6 +1287,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3315774762619428514, guid: 1abc7ad379df3764e98b2309740a55cc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 3315774762619428518, guid: 1abc7ad379df3764e98b2309740a55cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1371,10 +1400,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ammo Box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6928712700579786731, guid: 253fab38975d0df4480b388c956e2a8b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7226747978413055681, guid: 253fab38975d0df4480b388c956e2a8b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.83
+      value: 12.06
       objectReference: {fileID: 0}
     - target: {fileID: 7226747978413055681, guid: 253fab38975d0df4480b388c956e2a8b,
         type: 3}
@@ -1481,10 +1515,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ammo Box (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6928712700579786731, guid: 253fab38975d0df4480b388c956e2a8b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7226747978413055681, guid: 253fab38975d0df4480b388c956e2a8b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.15
+      value: 18.28
       objectReference: {fileID: 0}
     - target: {fileID: 7226747978413055681, guid: 253fab38975d0df4480b388c956e2a8b,
         type: 3}
@@ -1832,6 +1871,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Target
       objectReference: {fileID: 0}
+    - target: {fileID: 3315774762619428514, guid: 1abc7ad379df3764e98b2309740a55cc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 3315774762619428518, guid: 1abc7ad379df3764e98b2309740a55cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1901,10 +1945,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ammo Box
       objectReference: {fileID: 0}
+    - target: {fileID: 6928712700579786731, guid: 253fab38975d0df4480b388c956e2a8b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7226747978413055681, guid: 253fab38975d0df4480b388c956e2a8b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.99
+      value: 9.08
       objectReference: {fileID: 0}
     - target: {fileID: 7226747978413055681, guid: 253fab38975d0df4480b388c956e2a8b,
         type: 3}
